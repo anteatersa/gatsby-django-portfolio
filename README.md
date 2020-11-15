@@ -3,6 +3,10 @@ A beautiful and flexible portfolio for displaying your work.
 
 This project deploys a django admin as a CMS backend and a Gatsby JS frontend to build a static portfolio for deployment to the static hosting provider of your choice
 
+[Github Repository](https://github.com/anteatersa/gatsby-django-portfolio)
+
+[Demo Site](http://demo.umlungu.co.uk)
+
 ## Features
 
 - Easily editable portfolio items and site settings in the Django admin

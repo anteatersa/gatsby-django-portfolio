@@ -80,9 +80,9 @@ class Navbar extends Component {
 			<div className="transitionFade"><Link to="/#work" onClick={this.toggleMenu}>Work</Link></div>
 			<div className="transitionFade"><Link to="/about" onClick={this.toggleMenu}>About</Link></div>
 			<div className="transitionFade"><Link to="/contact" onClick={this.toggleMenu}>Contact</Link></div>
-			<div className="transitionFade"><Link to="/contact" onClick={this.toggleMenu}>
+			<div className="transitionFade"><a href="https://github.com/anteatersa/gatsby-django-portfolio" onClick={this.toggleMenu}>
                 <FaGithub size="" /> Github
-            </Link></div>
+            </a></div>
 		</div>
 	} else {
 		var menu = null
@@ -218,11 +218,11 @@ class Navbar extends Component {
 									</TransitionLink>
 								</span>
 								<span className="navbar-item">
-									<TransitionLink to="/contact" enter={{ length: 0.5 }} exit={{ length: 0.5 }}>
+									<a href="https://github.com/anteatersa/gatsby-django-portfolio">
 										<span style={{ color: this.props.text_colour }}>
 											<FaGithub size="" />
                                         </span>
-									</TransitionLink>
+									</a>
 								</span>
 							</div>
 						</div>
