@@ -30,19 +30,19 @@ This project deploys a django admin as a CMS backend and a Gatsby JS frontend to
 ## Screenshots
 
 ### Home Screen
-![alt tag](https://raw.githubusercontent.com/anteatersa/gatsby-django-portfolio/blob/master/screenshots/home.png)
+![alt tag](https://raw.githubusercontent.com/anteatersa/gatsby-django-portfolio/master/screenshots/home.png)
 
 ### Work Example 1
-![alt tag](https://raw.githubusercontent.com/anteatersa/gatsby-django-portfolio/blob/master/screenshots/work-1.png)
+![alt tag](https://raw.githubusercontent.com/anteatersa/gatsby-django-portfolio/master/screenshots/work-1.png)
 
 ### Work example 2
-![alt tag](https://raw.githubusercontent.com/anteatersa/gatsby-django-portfolio/blob/master/screenshots/work-2.png)
+![alt tag](https://raw.githubusercontent.com/anteatersa/gatsby-django-portfolio/master/screenshots/work-2.png)
 
 ### Preference Django
-![alt tag](https://raw.githubusercontent.com/anteatersa/gatsby-django-portfolio/blob/master/screenshots/preferences.png)
+![alt tag](https://raw.githubusercontent.com/anteatersa/gatsby-django-portfolio/master/screenshots/preferences.png)
 
 ### Editing Works Django
-![alt tag](https://raw.githubusercontent.com/anteatersa/gatsby-django-portfolio/blob/master/screenshots/works.png)
+![alt tag](https://raw.githubusercontent.com/anteatersa/gatsby-django-portfolio/master/screenshots/works.png)
 
 ### editing Work Django
-![alt tag](https://raw.githubusercontent.com/anteatersa/gatsby-django-portfolio/blob/master/screenshots/work.png)
+![alt tag](https://raw.githubusercontent.com/anteatersa/gatsby-django-portfolio/master/screenshots/work.png)
