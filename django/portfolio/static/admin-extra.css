@@ -1,0 +1,16 @@
+.djn-dynamic-form-work-worksection {
+    border-top: 5px solid #666;
+}
+#content.colM td.original.is-sortable {
+    background-color: antiquewhite;
+}
+#content.colM td.original.is-sortable p {
+    font-size: 14px;
+}
+
+.inline-related .inline-related h2 {
+    background: #999;
+}
+.djn-group .djn-group-nested {
+    margin: 0 30px;
+}

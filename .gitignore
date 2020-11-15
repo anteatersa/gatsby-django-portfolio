@@ -1,0 +1,17 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+
+# Temporary vim files
+*.swp
+*.swo
+*.swn
+*.swo
+
+.DS_Store
+gatsby/node_modules
+gatsby/public
+gatsby/.cache
+gatsby/core
+gatsby/yarn.lock
+

@@ -1,0 +1,37 @@
+#sudo docker run -it --rm -v $(pwd)/site:/site -p 8000:8000 gatsby-starter develop
+
+version: '3'
+  
+services:
+  django:
+    restart: unless-stopped
+    command: bash -c "while true; do bash /code/start.sh && sleep 5; done"
+    build:
+      context: ./django
+      dockerfile: ./Dockerfile
+    volumes:
+      - ./django:/code
+    ports:
+      - "8002:8000"
+  nginx.com:
+    restart: unless-stopped
+    image: nginx
+    restart: always
+    depends_on: 
+      - django
+    ports:
+      - "8003:80"
+    volumes:
+      - ./django/portfolio/media:/usr/share/nginx/html/media/
+  gatsby:
+    restart: unless-stopped
+    command: develop
+    build:
+      context: ./gatsby-docker
+      dockerfile: ./Dockerfile
+    volumes:
+      - ./gatsby:/site
+    ports:
+      - "8000:8000"
+    depends_on:
+      - nginx.com

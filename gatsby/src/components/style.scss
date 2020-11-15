@@ -1,0 +1,519 @@
+// Importing variables
+@import './variables.scss';
+
+// Importing Bulma from node_modules
+@import '~bulma/bulma.sass';
+
+// Import hamburgers
+@import './hamburgers.scss';
+
+// Fonts
+@mixin frank {
+	font-family: asap, "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+	font-weight: regular; 
+}
+
+// Variables
+$breakpoint-mobile: 768px;
+$breakpoint-tablet: 769px;
+$breakpoint-desktop: 1024px;
+$breakpoint-widescreen: 1216px;
+$breakpoint-fullhd: 1408px;
+
+.gradientBg {
+	display: flex;
+	//background: linear-gradient(to right, $primary-color, $secondary-color);
+	background: linear-gradient(to right, #171717, #1a1919);
+}
+
+body {
+	font-family: asap, "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+	font-weight: 400; 
+    font-size: 1.25rem;
+}
+
+// Bulma overrides
+a {
+	color: inherit;
+}
+
+// Spacing
+.margin-small {
+	margin-top: 1rem;
+}
+
+.margin-normal {
+	margin-top: 2rem;
+}
+
+.margin-big {
+	margin-top: 4rem;
+}
+
+// Navbar
+.hero-head {
+	height: 150px;
+}
+#logo {
+	width: 300px;
+}
+
+.navbar {
+	padding-top: 1rem;
+	@include frank;
+	font-weight: 700;
+    font-size: 1.2rem;
+    .navbar-end {
+        margin-top: 1rem;
+    }
+}
+.hero .navbar {
+	z-index: 1002;
+}
+
+.navbar > .container {
+    align-items: start;
+}
+
+.navbar-brand {
+    -webkit-tap-highlight-color: transparent; // Disable blue box on webkit mobile browsers
+	img {
+		max-height: 45px;
+	}
+	h1 {
+		width:300px;
+		font-size: 2rem;
+		font-weight: 700;
+		opacity: 1;
+		color: #fff;
+	}
+}
+
+.center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.navbar-menu {
+	margin-top: 7px;
+	a {
+		color: #fff;
+	}
+}
+
+// Mobile Navbar
+#mobile-nav-button {
+	display: none;
+	@media (max-width: $breakpoint-desktop) {
+		display: block;
+		margin-left: auto;
+	}
+    -webkit-tap-highlight-color: transparent; // Disable blue box on webkit mobile browsers
+}
+#mobile-nav-button:focus {
+	outline: 0;
+}
+.hamburger .hamburger-inner, .hamburger .hamburger-inner:after, .hamburger .hamburger-inner:before {
+    background-color: inherit;
+}
+.hamburger.is-active .hamburger-inner, .hamburger.is-active .hamburger-inner:after, .hamburger.is-active .hamburger-inner:before {
+    background-color: #fff;
+}
+#mobileNav {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background: rgba(55,55,55,0.9);
+	z-index: 1001;
+	padding: 20px;
+	padding-top: 150px;
+	text-align: center;
+	span {
+		position: absolute;
+		right: 1rem;
+		top: 1.5rem;
+		color: #eee;
+		font-size: 1.5rem;
+        font-weight: 700;
+		opacity: 0.8;
+		transition: opacity 0.3s;
+	}
+	span:hover {
+		cursor: pointer;
+		opacity: 1;
+	}
+	div {
+		a {
+			@include frank;
+            font-weight: 700;
+			font-size: 2rem;
+			color: #eee;
+			opacity: 0.8;
+			transition: opacity 0.3s;
+		}
+		a:hover {
+			opacity: 1;
+		}
+		margin-bottom: 1rem;
+	}
+}
+
+// Wrapper
+#siteWrapper {
+	transition: background-color 1s ease;
+	background-repeat: no-repeat !important;
+	@media (max-width: $breakpoint-mobile) {
+		background-size: auto !important;
+    	background-position-x: center !important;
+	}
+}
+
+// Content
+#siteContent {
+	min-height: 75vh;
+	h1 {
+		@include frank;
+		font-size: 3rem;
+        font-weight: 700;
+		line-height: 3rem;
+		margin-bottom: 1rem;
+		@media (min-width: $breakpoint-tablet) {
+			font-size: 4rem;
+			line-height: 4rem;
+			margin-bottom: 1rem;
+		}
+		text-align: center;
+	}
+	@media (max-width: $breakpoint-mobile) {
+  		padding-left: 1rem;
+  		padding-right: 1rem;
+	}	
+}
+.content {
+    blockquote {
+        background: transparent;
+        padding-top: 0;
+        padding-bottom: 0;
+        footer {
+            font-weight: 700;
+            font-size: 1rem;
+        }
+    }
+}
+
+// Home
+.home-header {
+	margin-bottom: 4rem;
+	p.lead {
+		@include frank;
+        font-weight: 700;
+		font-size: 1.5rem;
+		@media (min-width: $breakpoint-desktop) {
+			font-size: 2.2rem;
+		}
+		text-align: center;
+		@media (min-width: $breakpoint-tablet) {
+			text-align: center;
+		}
+		opacity: 0.65;
+	}
+	p.lead.center {
+		@include frank;
+		font-size: 2.5rem;
+		font-weight: 100;
+		text-align: center;
+		opacity: 0.65;
+	}
+}
+#home-video {
+	video {
+		max-height: 60vh;
+		@media (max-width: $breakpoint-mobile) {
+			max-height: 37vh;
+		}
+	}
+	@media (max-width: $breakpoint-mobile) {
+		text-align: center;
+	}
+}
+
+// Work
+.work-page {
+	margin-bottom: 4rem;	
+}
+.work-header {
+	@media (max-width: $breakpoint-desktop) {
+  		padding-left: 1rem;
+  		padding-right: 1rem;
+	}	
+	p.link {
+		@include frank;
+        font-weight: 700;
+		font-size: 1.5rem;
+		margin-bottom: 1rem;
+		@media (max-width: $breakpoint-mobile) {
+			text-align: center;
+		}
+		a {
+			opacity: 0.5;
+			transition: opacity 0.3s ease;
+		}
+		a:hover {
+			opacity: 1;
+			color: inherit;
+		}
+	}
+	p.lead {
+		@include frank;
+		font-weight: 100;
+		font-size: 1.5rem;
+        font-weight: 700;
+		@media (min-width: $breakpoint-tablet) {
+			font-size: 1.5rem;
+		}
+		text-align: center;
+		opacity: 0.75;
+	}
+}
+
+// Hero Left
+.work-header-hero-left {
+	h1, p.lead {
+		@media (min-width: $breakpoint-tablet) {
+			text-align: left !important;
+		}
+	}
+	.hero-image {
+		// Start animation
+		transition: 1.5s;
+		opacity: 1;
+		animation: slideUp 1.5s cubic-bezier(0.07, 0.4, 0.185, 1) forwards;
+		transform: translate3d(0, 8vh, 0);
+		// End animation
+		text-align: center;
+		@media (min-width: $breakpoint-tablet) {
+			text-align: right;
+		}
+		.gatsby-image-wrapper {
+			@media (max-width: $breakpoint-mobile) {
+				max-height: 50vh !important;
+				text-align: center;
+			}
+		}
+	}
+	.hero-text {
+		@media (min-width: $breakpoint-tablet) {
+			text-align: left;
+		}
+	}
+}
+// Hero Right
+.work-header-hero-right {
+	h1, p.lead {
+		@media (min-width: $breakpoint-tablet) {
+			text-align: right !important;
+		}
+	}
+	.hero-image {
+		// Start animation
+		transition: 1.5s;
+		opacity: 1;
+		animation: slideUp 1.5s cubic-bezier(0.07, 0.4, 0.185, 1) forwards;
+		transform: translate3d(0, 8vh, 0);
+		// End animation
+		text-align: center;
+		@media (min-width: $breakpoint-tablet) {
+			text-align: left;
+		}
+		.gatsby-image-wrapper {
+			@media (max-width: $breakpoint-mobile) {
+				max-height: 50vh !important;
+				text-align: center;
+			}
+		}
+	}
+	.hero-text {
+		@media (min-width: $breakpoint-tablet) {
+			text-align: right;
+		}
+	}
+}
+.work-section {
+	margin-top: 1rem;	
+	@media (min-width: $breakpoint-tablet) {
+		margin-top: 4rem;	
+	}
+	a {
+		text-decoration: underline;
+	}
+	@media (max-width: $breakpoint-mobile) {
+		.column-image {
+			text-align: center;
+			img {
+				margin: 0 auto;
+			}
+		}
+	}
+}
+.work-section-light {
+    h1, h2, h3, h4,h5, h6 {
+        color: #fff;
+    }
+}
+.work-section-dark {
+    h1, h2, h3, h4,h5, h6 {
+        color: #333;
+    }
+}
+a.work-footer-link {
+	transition: all 0.3s ease;
+	@include frank;
+	span {
+		display: block;
+		color: rgba(255,255,255,0.25);
+		font-size: 1rem;
+	}
+	font-size: 1.5rem;
+	border-radius: 1rem;
+	background: rgba(0,0,0,0.25);
+	color: rgba(255,255,255,0.5);
+	padding: 40px 20px;
+	text-align: center;
+	display: block;
+}
+a.work-footer-link:hover {
+	background: rgba(0,0,0,0.75);
+	color: rgba(255,255,255,1);
+}
+
+// Portfolio Card
+.is-half {
+	.portfolioCard {
+		height: 22vw;
+		@media (max-width: $breakpoint-mobile) {
+			height: 40vw;
+			//margin-bottom: 5vw !important;
+		}
+	}
+}
+.is-full {
+	.portfolioCard {
+		height: 30vw;
+		@media (max-width: $breakpoint-mobile) {
+			height: 40vw;
+			//margin-bottom: 5vw !important;
+		}
+	}
+}
+.portfolioCard {
+    box-shadow: 3px 3px 10px #00000040;
+    border-radius: 5px;
+    background-repeat: no-repeat;
+    background-size: cover;
+	background-position-x: center;
+	.cover {
+    	border-radius: 5px;
+		transition: opacity 0.3s ease;
+		width: 100%;
+		height: 100%;
+		background-color: #1f1f1f;
+		opacity: 0;
+		display: flex;
+		flex-wrap: wrap;
+		align-content: center; /* used this for multiple child */
+		align-items: center; /* if an only child */
+		justify-content: center;
+	}
+	h2 {
+		transition: opacity 0.3s ease;
+		text-align: center;
+		color: #fff;
+    	font-size: 2rem;
+    	font-weight: bold;
+		opacity: 0;
+	}
+}
+.portfolioCard:hover {
+	h2 {
+		opacity: 1;
+	}
+	.cover {
+		opacity: 0.5;
+	}
+}
+
+
+///// Animations //////
+
+// Logo
+#svg_logo, #svg_logo span {
+	width: 230px;
+	height: 70px;
+}
+#logo #ghost {
+    -webkit-animation: bob 1.5s cubic-bezier(0.37, 0, 0.63, 1) infinite alternate;
+    animation: bob 1.5s cubic-bezier(0.37, 0, 0.63, 1) infinite alternate;
+}
+@keyframes bob {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(10px); }
+}
+
+// Fade in+up screens
+.transitionFade {
+    transition: 1s;
+    opacity: 1;
+    animation: slideUp 1s cubic-bezier(0.07, 0.4, 0.185, 1) forwards;
+    transform: translate3d(0, 8vh, 0);
+}
+.transitionFadeB { // Slightly slower
+    transition: 1.5s;
+    opacity: 1;
+    animation: slideUp 1.5s cubic-bezier(0.07, 0.4, 0.185, 1) forwards;
+    transform: translate3d(0, 8vh, 0);
+}
+@keyframes slideUp {
+  0% {
+	opacity: 0;
+    transform: translate3d(0, 8vh, 0);
+  }
+  100% {
+	opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+// Fade in menu
+.menuFade {
+    transition: 0.3s;
+    opacity: 1;
+    animation: fadeIn 0.3s cubic-bezier(0.07, 0.4, 0.185, 1) forwards;
+}
+@keyframes fadeIn {
+  0% {
+	opacity: 0;
+  }
+  100% {
+	opacity: 1;
+  }
+}
+
+.footer {
+	margin-top: 2rem;
+	color: #999;
+	background: #0f0f0f;
+	display: flex;
+	padding: 3rem 1.5rem;
+	line-height: 1.5rem;
+	span {
+		font-size: 2rem;
+	}
+	a {
+		border-bottom: 1px solid;
+		color: #ddd;
+	}
+	a:hover {
+		color: #fff;
+	}
+}
