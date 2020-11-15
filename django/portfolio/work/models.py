@@ -54,12 +54,21 @@ class WorkSection(models.Model):
     #images = models.ManyToManyField(WorkSectionImage, null = True, blank = True)
     #images = SortedManyToManyField(WorkSectionImage, null = True, blank = True)
     video = models.FileField(null = True, blank = True)
+    
+    def __str__(self):
+        ordering = ("sorting",)
+    
+    class Meta:
+        ordering = ("sorting",)
      
 class WorkSectionImage(models.Model):
     section = models.ForeignKey(WorkSection, on_delete=models.CASCADE)
     title = models.CharField(max_length = 512, null = True, blank = True)
     image = models.ImageField()
     sorting = models.IntegerField(default = 0)
+    
+    class Meta:
+        ordering = ("sorting",)
 
 #################
 #### SIGNALS ####
